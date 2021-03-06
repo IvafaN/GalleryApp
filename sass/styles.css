@@ -1,0 +1,213 @@
+.navbar_name, .navbar_name-logo, .navbar_menu, .navbar_menu-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar {
+  background: #10ecd6;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  z-index: 10;
+  position: relative;
+}
+
+.navbar_name {
+  list-style: none;
+  text-align: center;
+  margin-left: 40%;
+}
+
+.navbar_name h6 {
+  font-family: 'Ultra', serif;
+  font-size: 2em;
+}
+
+.navbar_name-logo {
+  color: black;
+  padding: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.navbar_menu {
+  list-style: none;
+  text-align: center;
+  margin-right: 24px;
+}
+
+.navbar_menu-links {
+  color: black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.navbar_menu-links:hover {
+  color: #f7f2f2;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.home .col {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #f7f2f2;
+  height: 750px;
+}
+
+.home h1 {
+  padding: 150px 100px;
+  font-family: 'Akaya Telivigala', cursive;
+  font-size: 55px;
+  height: 500px;
+}
+
+.home img {
+  border-radius: 50%;
+  height: 600px;
+  width: 550px;
+  padding: 50px;
+}
+
+.home .btnGallery {
+  border-radius: 7px;
+  height: 60px;
+  width: 200px;
+  top: 10px;
+  margin-left: 40%;
+  font-size: 30px;
+  background-color: #10ecd6;
+  z-index: -1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.home .btnGallery:hover {
+  background-color: #38f138;
+  color: #f7f2f2;
+}
+
+.gallery {
+  margin-bottom: 0px;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  overflow: hidden;
+  width: auto;
+  background-color: black;
+  padding: 0 0 80px 0;
+}
+
+.gallery h1 {
+  color: #f7f2f2;
+  font-size: 55px;
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Ultra", serif;
+}
+
+.gallery_images {
+  background-color: #10ecd6;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 0px;
+  float: left;
+  width: 350px;
+  height: 320pxs;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.gallery_images img {
+  width: 340px;
+  height: 290px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.gallery_images_overlay {
+  width: 340px;
+  height: 290px;
+  position: absolute;
+  top: 5px;
+  border-radius: 7px;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(#38f138));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #38f138);
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.gallery_images:hover .gallery_images_overlay {
+  opacity: 1;
+}
+
+.gallery_images_desc {
+  width: 80%;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: #f7f2f2;
+}
+
+.gallery_images_desc hr {
+  background: #f7f2f2;
+  height: 2px;
+  border: 0;
+  margin: 15px auto;
+  width: 60%;
+}
+
+.gallery_images:hover .gallery_images_desc {
+  bottom: 40%;
+  opacity: 1;
+}
+
+.gallery_images_name {
+  width: 340px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  background: #10ecd6;
+  margin: auto;
+  background: black;
+}
+
+.gallery_images_name p {
+  width: auto;
+  background-color: black;
+  color: #10ecd6;
+  font-weight: bold;
+  font-size: 18px;
+}
+/*# sourceMappingURL=styles.css.map */

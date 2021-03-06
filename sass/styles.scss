@@ -1,0 +1,145 @@
+@import "navbar";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+}
+
+.home {
+    .col {
+        justify-content: center;
+        background: $light;
+        height: 750px;
+    }
+
+    h1 {
+        padding: 150px 100px;
+        font-family: 'Akaya Telivigala', cursive;
+        font-size: 55px;
+        height: 500px;
+    }
+
+    img {
+        border-radius: 50%;
+        height: 600px;
+        width: 550px;
+        padding: 50px;
+    }
+
+    .btnGallery {
+        border-radius: 7px;
+        height: 60px;
+        width: 200px;
+        top: 10px;
+        margin-left: 40%;
+        font-size: 30px;
+        background-color: $primary;
+        z-index: -1;
+	    transition: 0.5s;
+
+        &:hover {
+            background-color: $secondary;
+            color: $light;
+        }
+    }
+}
+
+.gallery {
+    margin-bottom: 0px;
+    min-height: fit-content;
+    overflow: hidden;
+    width: auto;
+    background-color: $dark;
+    padding: 0 0 80px 0;
+
+    h1 {
+        color: $light;
+        font-size: 55px;
+        margin-top: 50px;
+        text-align: center;
+        font-family: "Ultra", serif;
+    }
+
+    &_images {
+        background-color: $primary;
+        margin-top: 100px;
+        margin-left: 100px;
+        margin-right: 0px;
+        float: left;
+        width: 350px;
+        height: 320pxs;
+        padding: 5px;
+        text-align: center;
+        position: relative;
+
+        img {
+            width: 340px;
+            height: 290px;
+            border-radius: 8px;
+            position: relative;
+            // opacity: 0.3;
+        }
+
+        &_overlay {
+            width: 340px;
+            height: 290px;
+            position: absolute;
+            top: 5px;
+            border-radius: 7px;
+            cursor: pointer;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), $secondary);
+            opacity: 0;
+            transition: 1s;
+        }
+
+        &:hover .gallery_images_overlay {
+            opacity: 1;
+        }
+
+        &_desc {
+            width: 80%;
+            position: absolute;
+            bottom: 0%;
+            left: 50%;
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: 1s;
+            color: $light;
+
+            hr{
+                background: $light;
+                height: 2px;
+                border: 0;
+                margin: 15px auto;
+                width: 60%;
+            }
+        }
+
+        &:hover .gallery_images_desc {
+            bottom: 40%;
+	        opacity: 1;
+        }
+
+        &_name {
+            width: 340px;
+            height: 40px;
+            border: 2px solid $dark;
+            border-radius: 8px;
+            padding: 10px;
+            background: $primary;
+            margin: auto;
+            background: $dark;
+
+            p {
+                width: auto;
+                background-color: $dark;
+                color: $primary;
+                font-weight: bold;
+                font-size: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import "variables";
+
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    background: $primary;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vw - 1200px) / 2);
+    z-index: 10;
+    position: relative;
+
+    &_name {
+        @extend %align-center;
+        list-style: none;
+        text-align: center;
+        margin-left: 40%;
+
+        h6 {
+            font-family: 'Ultra', serif;
+            font-size: 2em;
+        }
+    
+        &-logo {
+            color: $dark;
+            padding: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 2rem;
+            @extend %align-center;
+        }
+    }
+
+    &_menu {
+        @extend %align-center;
+        list-style: none;
+        text-align: center;
+        margin-right: 24px;
+
+        &-links {
+            color: $dark;
+            @extend %align-center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 0 1rem;
+
+            &:hover {
+                color: $light;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
